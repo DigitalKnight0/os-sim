@@ -60,13 +60,14 @@ const TaskManager: Process = {
           }).appendMany(
             new HTML('th').style({ 'text-align': 'center', width: '10%' }).text('PID'),
             new HTML('th').style({ 'text-align': 'left', width: '45%' }).text('Process Name'),
-            new HTML('th').style({ 'text-align': 'left', width: '45%' }).text('Session Token')
+            new HTML('th').style({ 'text-align': 'left', width: '45%' }).text('Memory Consumption')
           )
         )
 
       const tbody = new HTML('tbody').appendTo(table)
 
       for (const proc of processList) {
+        console.log(process.kernel)
         new HTML('tr').style({
           padding: '5px',
           'border-radius': '10px'
@@ -74,7 +75,7 @@ const TaskManager: Process = {
           .appendMany(
             new HTML('td').style({ 'text-align': 'center' }).text(proc.pid.toString()),
             new HTML('td').style({ 'text-align': 'left' }).text(proc.name),
-            new HTML('td').style({ 'text-align': 'left' }).text(proc.token)
+            new HTML('td').style({ 'text-align': 'left' }).text(`${Math.floor(Math.random() * 49) + 1}`)
           )
           .on('click', () => {
             process.killProcess(proc.pid).catch((e: any) => console.error(e))

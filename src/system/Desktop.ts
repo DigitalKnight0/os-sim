@@ -13,6 +13,7 @@ const BootLoader: Process = {
     const splashElement = splashScreen.getElement()
     splashElement.appendTo(document.body)
 
+    await new Promise(r => setTimeout(r, 5000));
     const { fs } = process
     const wm = await process.loadLibrary('lib/WindowManager')
     const launcher = await process.loadLibrary('lib/Launcher')

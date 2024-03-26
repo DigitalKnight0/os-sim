@@ -70,7 +70,8 @@ export default class Kernel {
   async boot (boot: HTML, progress: HTML, args: URLSearchParams): Promise<void> {
     progress.style({ width: '0%' })
     const bootArgs = args.toString().replace(/=($|&)/g, '=true ')
-    console.log(`FlowOS - v${pkg.version}, Flow Works (c) ${new Date().getFullYear()}`)
+    console.log(`OS- Simulator, By 21CS087 & 21CS083 (c) ${new Date().getFullYear()}`)
+    console.log('Submitted to: Mam Bushra Naz')
     console.log()
     console.log(`User Agent : ${navigator.userAgent}`)
     console.log(`Boot Args  : ${bootArgs === '' ? 'None' : bootArgs}`)
@@ -139,7 +140,7 @@ export default class Kernel {
                 .catch(e => { throw e })
             })
             .catch(e => { throw e })
-        }, 1000)
+        }, 5000)
       }
     })
   }

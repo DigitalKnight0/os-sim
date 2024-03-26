@@ -37,6 +37,12 @@ export const defaultFS: { root: Directory } = {
                 permission: Permission.USER,
                 content: Buffer.from('apps/Manager')
               },
+              'Terminal.app': {
+                type: 'file',
+                deleteable: true,
+                permission: Permission.USER,
+                content: Buffer.from('apps/Terminal')
+              },
               'Store.app': {
                 type: 'file',
                 deleteable: true,

@@ -1,6 +1,6 @@
 import Kernel from '../../kernel'
 
-import FlowLogo from '../../assets/flow.png'
+import FlowLogo from '../../assets/MU-logo.png'
 import { Library } from '../../types'
 import LibraryLib from '../../structures/LibraryLib'
 
@@ -34,11 +34,11 @@ const SplashScreen: Library = {
       })
       new HTML('img').attr({
         src: FlowLogo,
-        width: 128
+        width: 256
       }).appendTo(div)
-      const h1 = new HTML('h1').style({ margin: '0' }).text('FlowOS').appendTo(div)
-      new HTML('sup').style({ 'font-size': '0.5em' }).text(kernel.codename).appendTo(h1)
-      new HTML('p').style({ margin: '0' }).text('loading...').appendTo(div)
+      const h1 = new HTML('h1').style({ margin: '0' }).text('OS Simulator').appendTo(div)
+      new HTML('p').style({ 'font-size': '0.5em' }).text('By 21CS087 & 21CS083').appendTo(h1)
+      new HTML('p').style({ margin: '0' }).text('Booting...').appendTo(div)
 
       return div
     }

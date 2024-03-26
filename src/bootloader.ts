@@ -6,7 +6,7 @@
 import Kernel, { spaces } from './kernel'
 import HTML from './HTML'
 
-import logo from './assets/flow.png'
+import logo from './assets/MU-logo.png'
 
 const body = new HTML(document.body)
 
@@ -43,7 +43,7 @@ boot.appendMany(
         src: logo,
         height: '40px'
       }),
-      new HTML('h1').text('FlowOS').styleJs({
+      new HTML('h1').text('OS Simulator').styleJs({
         color: 'white'
       })
     ),
