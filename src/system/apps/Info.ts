@@ -34,32 +34,8 @@ const Info: Process = {
       .appendMany(
         new HTML('h1').style({
           margin: '0'
-        }).text('FlowOS')
-          .append(new HTML('sup').text(`${process.sysInfo.codename}`).style({
-            'font-size': '0.5em'
-          })),
-        new HTML('p').style({
-          margin: '0'
-        }).text(`v${String(process.sysInfo.version)}`),
-        new HTML('br'),
-        new HTML('a').attr({
-          href: 'https://discord.gg/nj93ywpyRy'
-        }).append(
-          new HTML('img').attr({
-            src: badge,
-            height: '50'
-          })
-        ),
-        new HTML('br'),
-        new HTML('a').text('Discord').attr({
-          href: 'https://discord.gg/86F8dK9vfn',
-          class: 'discord'
-        }),
-        new HTML('span').text(' - '),
-        new HTML('a').text('Github').attr({
-          href: 'https://github.com/Flow-Works/FlowOS',
-          class: 'github'
-        })
+        }).text('OS Simulator')
+        
       )
   }
 }
